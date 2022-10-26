@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+/* GLOBAL RESET */
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM PROPERTIES */
+:root {
+  --primary-font-color: #f3f3f3;
+  --form-background-color: rgba(27, 27, 50, 0.8);
+  --button-color: #37af65;
+  --border-radius: .25rem;
+  --font-size-smaller: .9rem;
+  --font-size-default: 1rem;
+  --font-size-larger: 1.125rem;
+  --padding-small: .25rem;
+  --padding-large: 2.5rem;
+  --checkbox-size: 1.25rem;
+  --checkbox-right-margin: .625rem;
+  --margin-small: .5rem;
+  --margin-medium: 1.8rem;
+}
+
+body {
+  /* display: block; */
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--font-size-default);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--primary-font-color);
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(58, 58, 158, 0.8), 
+    rgba(136, 136, 206, 0.7)
+    ), 
+    url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  /* outline: 1px solid fuchsia; */
+  width: 100%;
+  max-width: 720px;
+  margin: 3.125rem auto 0 auto;
+}
+
+/* HEADER */
+header {
+  /* outline: thick solid greenyellow; */
+  text-align: center;
+  background: none;
+}
+
+h1 {
+  /* outline: 1px solid fuchsia; */
+  margin-bottom: var(--margin-small);
+  font-weight: 700;
+  line-height: 1.2;;
+}
+
+#description {
+  font-style: italic;
+  font-size: var(--font-size-larger);
+  margin-bottom: var(--margin-medium);
+}
+
+/* FORM */
+form {
+  border-radius: var(--border-radius);
+  background: var(--form-background-color);
+}
+
+.form-group {
+  /* outline: 1px solid yellow; */
+  padding: var(--padding-small);
+  margin: 0 auto 1.25rem auto;
+}
+
+#survey-form {
+  padding: var(--padding-large);
+}
+
+label {
+  /* border: 4px solid red; */
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-larger);
+  margin-bottom: .5rem;
+}
+
+.dropdown-label {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-larger);
+  margin-bottom: var(--margin-small);
+}
+
+.font-small {
+  font-size: var(--font-size-smaller);
+}
+
+/* INPUT FIELDS */
+input {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--margin-small);
+}
+
+.form-control {
+  /* outline: 2px solid red; */
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid black;
+  border-radius: var(--border-radius);
+  padding: .375rem .75rem;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border:2px solid blue;
+  outline: 0;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* RADIO & CHECKBOXES */
+.input-radio,
+.input-checkbox {
+  min-height: var(--checkbox-size);
+  min-width: var(--checkbox-size);
+  margin-right: var(--checkbox-right-margin);
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+/* BUTTON */
+#submit {
+  width: 100%;
+  height: 3rem;
+  color: var(--primary-font-color);
+  text-align: center;
+  justify-content: center;
+  background: var(--button-color);
+  border: none;
+  border-radius: var(--border-radius);
+}
