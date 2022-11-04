@@ -1,49 +1,89 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --canvas-width: 500px;
+  --canvas-height: 600px;
+  --canvas-background-color: #4d0f00;
+  --frame-border-thickness: 50px;
+  --frame-border-style: solid;
+  --frame-border-color: black;
+  --frame-width: var(--canvas-width);
+  --frame-padding: 50px;
+  --margin: 20px;
+  --box1-width: 425px;
+  --box1-height: 150px;
+  --box3-width: 91%;
+  --box3-height: 28%;
+  --box1-color: #efb762;
+  --box2-color: #8f0401;
+  --box3-color: #b20403;
+  --box1-border-radius: 9px;
+  --box2-border-radius: 8px 10px;
+  --box3-border-radius: 30px 25px 60px 12px;
+  --box1-rotate: -0.6deg;
+  --box2-rotate: 0.4deg;
+  --box3-rotate: -0.2deg;
+  --shadow-size-small: 0 0 3px 3px;
+  --shadow-size-large: 0 0 5px 5px;
+  --blur-small: 1px;
+  --blur-large: 2px;
+}
+
 .canvas {
-  width: 500px;
-  height: 600px;
-  background-color: #4d0f00;
+  width: var(--canvas-width);
+  height: var(--canvas-height);
+  background-color: var(--canvas-background-color);
   overflow: hidden;
-  filter: blur(2px);
+  filter: blur(var(--blur-large));
+  margin: auto;
 }
 
 .frame {
-  border: 50px solid black;
-  width: 500px;
-  padding: 50px;
-  margin: 20px auto;
+  border: 
+    var(--frame-border-thickness)
+    var(--frame-border-style)
+    var(--frame-border-color);
+  width: var(--frame-width);
+  padding: var(--frame-padding);
+  margin: var(--margin) auto;
 }
 
 .one {
-  width: 425px;
-  height: 150px;
-  background-color: #efb762;
-  margin: 20px auto;
-  box-shadow: 0 0 3px 3px #efb762;
-  border-radius: 9px;
-  transform: rotate(-0.6deg);
+  width: var(--box1-width);
+  height: var(--box1-height);
+  background-color: var(--box1-color);
+  margin: var(--margin) auto;
+  box-shadow: 
+    var(--shadow-size-small) 
+    var(--box1-color);
+  border-radius: var(--box1-border-radius);
+  transform: rotate(var(--box1-rotate));
 }
 
 .two {
-  width: 475px;
-  height: 200px;
-  background-color: #8f0401;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 3px 3px #8f0401;
-  border-radius: 8px 10px;
-  transform: rotate(0.4deg);
+  width: calc(var(--box1-width) + 50px);
+  height: calc(var(--box1-height) + 50px);
+  background-color: var(--box2-color);
+  margin: 0 auto var(--margin);
+  box-shadow: 
+    var(--shadow-size-small) 
+    var(--box2-color);
+  border-radius: var(--box2-border-radius);
+  transform: rotate(var(--box2-rotate));
 }
 
 .one, .two {
-  filter: blur(1px);
+  filter: blur(var(--blur-small));
 }
 
 .three {
-  width: 91%;
-  height: 28%;
-  background-color: #b20403;
+  width: var(--box3-width);
+  height: var(--box3-height);
+  background-color: var(--box3-color);
   margin: auto;
-  filter: blur(2px);
-  box-shadow: 0 0 5px 5px #b20403;
-  border-radius: 30px 25px 60px 12px;
-
+  filter: blur(var(--blur-large));
+  box-shadow: 
+  var(--shadow-size-large) 
+    var(--box3-color);
+  border-radius: var(--box3-border-radius);
+  transform: rotate(var(--box3-rotate));
 }
