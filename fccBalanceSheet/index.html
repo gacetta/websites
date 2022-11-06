@@ -9,12 +9,14 @@
   <body>
     <main>
       <section>
-        <h1>
-          <span class="flex">
-            <span>AcmeWidgetCorp</span>
-            <span>Balance Sheet</span>
-          </span>
-        </h1>
+        <header>
+          <h1>
+            <span class="flex">
+              <span>AcmeWidgetCorp</span>
+              <span>Balance Sheet</span>
+            </span>
+          </h1>
+        </header>
         <div id="years" aria-hidden="true">
           <span class="year">2019</span>
           <span class="year">2020</span>
@@ -107,7 +109,25 @@
               </tr>
             </tbody>
           </table>
-          <table></table>
+          <table>
+            <caption>Net Worth</caption>
+            <thead>
+              <tr>
+                <td></td>
+                <th><span class="sr-only">2019</span></th>
+                <th><span class="sr-only">2020</span></th>
+                <th><span class="sr-only">2021</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="total">
+                <th>Total <span class="sr-only">Net Worth</span></th>
+                <td>$-171</td>
+                <td>$136</td>
+                <td class="current">$334</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </main>
