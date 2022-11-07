@@ -1,0 +1,118 @@
+/* GLOBAL RESET */
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CUSTOM PROPERTIES */
+:root {
+  --background-color: #00471b;
+  --primary-color: #ffffff;
+  --secondary-color: #1d1e22;
+  --border-radius: 3px;
+  --padding-small: 2px;
+  --padding-med: 20px;
+  --padding-large: 90px;
+  --margin-small: 2px;
+  --margin-large: 80px;
+  --piano-width-large: 992px;
+  --piano-width-med: 675px;
+  --piano-width-small: 358px;
+  --piano-height: 290px;
+  --keys-width-large: 949px;
+  --keys-width-med: 633px;
+  --keys-width-small: 318px;
+  --logo-width-large: 200px;
+  --logo-width-small: 150px;
+  --logo-position: 23px;
+  --keys-height: 180px;
+  --white-key-width: 41px;
+  --white-key-height: 175px;
+  --black-key-width: 32px;
+  --black-key-height: 100px;
+  --black-key-position: -18px;
+}
+
+#piano {
+  background-color: var(--background-color);
+  width: var(--piano-width-large);
+  height: var(--piano-height);
+  margin: var(--margin-large) auto;
+  padding: 
+    var(--padding-large)
+    var(--padding-med)
+    0 
+    var(--padding-med);
+  position: relative;
+  border-radius: calc(var(--border-radius) + 7px);
+
+}
+
+.keys {
+  background-color: var(--secondary-color);
+  width: var(--keys-width-large);
+  height: var(--keys-height);
+  padding-left: var(--padding-small);
+  overflow: hidden;
+}
+
+.key {
+  background-color: var(--primary-color);
+  position: relative;
+  width: var(--white-key-width);
+  height: var(--white-key-height);
+  margin: var(--margin-small);
+  float: left;
+  border-radius: 
+    0 
+    0 
+    var(--border-radius) 
+    var(--border-radius);
+}
+
+.key.black--key::after {
+  background-color: var(--secondary-color);
+  content: "";
+  position: absolute;
+  left: var(--black-key-position);
+  width: var(--black-key-width);
+  height: var(--black-key-height);
+  border-radius: 
+    0 
+    0 
+    var(--border-radius) 
+    var(--border-radius);
+}
+
+.logo {
+  width: var(--logo-width-large);
+  position: absolute;
+  top: var(--logo-position);
+}
+
+@media (max-width: 768px) {
+  #piano {
+    width: var(--piano-width-small);
+  }
+
+  .keys {
+    width: var(--keys-width-small);
+  }
+
+  .logo {
+    width: (--logo-width-small);
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+  #piano {
+    width: var(--piano-width-med);
+  }
+
+  .keys {
+    width: var(--keys-width-med);
+  }
+}
