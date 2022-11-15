@@ -34,7 +34,7 @@ section {
   display: block;
 }
 
-header {
+/* header {
   position: fixed;
   top: 0;
   min-height: 75px;
@@ -44,10 +44,11 @@ header {
   align-items: center;
   background-color: var(--color-background);
   z-index: 1;
-}
+  width: 100%;
+} */
 
 /* Why didn't this work? */
-/* #header {
+#header {
   position: fixed;
   top: 0;
   min-height: 75px;
@@ -56,7 +57,9 @@ header {
   justify-content: space-around;
   align-items: center;
   background-color: var(--color-background);
-} */
+  z-index: 1;
+  width: 100%;
+}
 
 .logo {
   width: 60vw;
@@ -178,7 +181,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid green;
+  border: 1px solid var(--color-text-dark);
   width: 32%;
 }
 
@@ -225,11 +228,85 @@ footer ul {
   /* border: 1px solid red; */
 }
 
-.footer-list-element {
+.footer-link {
   padding: 5px;
 }
 
 #footer-copyright {
   text-align: right;
   font-size: .9em;
+}
+
+@media only screen and (max-width: 730px) {
+  #header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    margin: 5px;
+  }
+
+  #hero {
+    margin-top: 170px;
+    height: 150px;
+  }
+
+  .grid-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  .feature {
+    text-align: center;
+  }
+
+  .container {
+    max-width: 600px;
+  }
+
+  .fas {
+    font-size: 5.5rem;
+  }
+
+  #pricing {
+    flex-direction: column;
+  }
+
+  .product {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #footer-list li:last-child {
+    margin-bottom: 20px;
+  }
+
+  .nav-link,
+  .footer-link {
+    font-size: 1.25em;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #header-img {
+    width: 400px;
+    height: auto;
+    margin: 0;
+  }
 }
