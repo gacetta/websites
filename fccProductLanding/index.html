@@ -6,8 +6,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Original Trombones</title>
   <link href="styles.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
 </head>
 <body>
-  
+
+  <header id="#header">
+    <div class="logo">
+      <img 
+        id="header-img" 
+        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" 
+        alt="Original Trombones Logo"
+      />
+    </div>
+
+    <nav id="nav-bar">
+      <ul>
+        <li>
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#how-it-works">How It Works</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#pricing">Pricing</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h2 id="hero-header">Handcrafted, home-made masterpieces</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+        <input type="submit" id="submit" value="Get Started" class="btn">
+      </form>
+    </section>
+
+    <div class="container">
+      <section id="features">
+        <div class="grid-container">
+          <div class="icon">
+            <i class="fas fa-solid fa-fire"></i>
+          </div>
+          <div class="feature">
+            <h2>Premium Materials</h2>
+            <p>Our trombones use the shiniest brass which is sourced locally. 
+              This will increase the longevity of your purchase.</p>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="icon">
+            <i class="fas fa-solid fa-plane"></i>
+          </div>
+          <div class="feature">
+            <h2>Fast Shipping</h2>
+            <p>PWe make sure you recieve your trombone as soon as we have finished making it. 
+              We also provide free returns if you are not satisfied.</p>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="icon">
+            <i class="fas fa-solid fa-thumbs-up"></i>
+          </div>
+          <div class="feature">
+            <h2>Quality Assurance</h2>
+            <p>For every purchase you make, we will ensure there are no damages 
+              or faults and we will check and test the pitch of your instrument.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works">
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/s5IKthNYhVY" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allowfullscreen></iframe>
+      </section>
+
+      <section id="pricing">
+        <article class="product">
+          <h3 class="product-header">Tenor Trombone</h3>
+          <h2 class="product-price">$600</h2>
+          <ul class="product-list">
+            <li class="product-list-element">All around average</li>
+            <li class="product-list-element">meh</li>
+            <li class="product-list-element">Long reach</li>
+            <li class="product-list-element">Who needs friends?</li>
+          </ul>
+          <button class="product-btn btn">Select</button>
+        </article>
+        
+        <article class="product">
+          <h3 class="product-header">Tenor Trombone</h3>
+          <h2 class="product-price">$600</h2>
+          <ul class="product-list">
+            <li class="product-list-element">All around average</li>
+            <li class="product-list-element">meh</li>
+            <li class="product-list-element">Long reach</li>
+            <li class="product-list-element">Who needs friends?</li>
+          </ul>
+          <button class="product-btn btn">Select</button>
+        </article>
+
+        <article class="product">
+          <h4 class="product-header">Tenor Trombone</h4>
+          <h2 class="product-price">$600</h2>
+          <ul class="product-list">
+            <li class="product-list-element">All around average</li>
+            <li class="product-list-element">meh</li>
+            <li class="product-list-element">Long reach</li>
+            <li class="product-list-element">Who needs friends?</li>
+          </ul>
+          <button class="product-btn btn">Select</button>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <ul id="footer-list">
+      <li class="footer-list-element">Privacy</li>
+      <li class="footer-list-element">Terms</li>
+      <li class="footer-list-element">Contact</li>
+    </ul>
+    <p id="footer-copyright">Copyright 2016, Rusty Trombone</p>
+  </footer>
 </body>
 </html>

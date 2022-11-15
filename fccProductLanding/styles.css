@@ -1,0 +1,235 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-background: #eee;
+  --color-text-dark: #000;
+  --color-btn: #f1c40f;
+  --color-btn-hover: orange;
+  --margin-default: 20px;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: 'Lato', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-dark);
+}
+
+section {
+  display: block;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-background);
+  z-index: 1;
+}
+
+/* Why didn't this work? */
+/* #header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-background);
+} */
+
+.logo {
+  width: 60vw;
+}
+
+#header-img {
+  height: 35px;
+  margin-left: var(--margin-default);
+}
+
+ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  height: 200px;
+}
+
+#hero-header {
+  margin-bottom: var(--margin-default);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#email {
+  width: 275px;
+  height: 30px;
+  padding: 5px;
+}
+
+.btn {
+  background-color: var(--color-btn);
+  border: none;
+  padding: 5px 20px;
+  margin: 15px 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.btn:hover {
+  background-color: var(--color-btn-hover);
+  transition: all 1s;
+}
+
+#submit {
+  font-weight: 700;
+}
+
+.grid-container {
+  display: flex;
+  /* margin-bottom: 40px; */
+}
+#features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkorange;
+  width: 20vw;
+  height: 125px;
+}
+
+.fas {
+  font-size: 3em;
+  /* font-weight: 900; */
+  /* display: inline-block;
+  line-height: 1; */
+}
+
+#features .feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  padding: 5px;
+  /* border: 1px solid red; */
+}
+
+.container,
+footer {
+  max-width: 1000px;
+  padding: 20px;
+  margin: auto;
+}
+
+#how-it-works {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#how-it-works iframe{
+  max-width: 540px;
+  width: 100%;
+}
+
+#pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid green;
+  width: 32%;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-header {
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 15px;
+  background-color: lightgray;
+  width: 100%;
+  text-align: center;
+}
+
+.product-price {
+  padding: 15px;
+}
+
+.product-list-element {
+  padding: 5px;
+}
+
+.product-btn {
+  height: 40px;
+  margin-top: 30px;
+}
+
+footer {
+  background-color: lightgray;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  /* border: 1px solid red; */
+}
+
+.footer-list-element {
+  padding: 5px;
+}
+
+#footer-copyright {
+  text-align: right;
+  font-size: .9em;
+}
