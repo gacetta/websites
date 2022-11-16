@@ -13,6 +13,7 @@
   --color-secondary: #7E9DC2;
   --color-dark: #841c18;
   --color-light: #f1f1f1;
+  --size: 7.5vh;
 }
 
 html {
@@ -41,7 +42,7 @@ header {
   /* border: 1px solid green; */
   letter-spacing: 1rem;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--color-dark);
   transition: all 3s ease-out;
   margin-left: 30px;
@@ -54,7 +55,6 @@ header {
   transform: translateY(-3px);
   text-shadow: 1rem 1rem 1.2rem var(--color-dark);
   cursor: default;
-  color: var(--color-light);
 }
 
 #nav-bar {
@@ -101,17 +101,17 @@ a {
 }
 
 #hero {
-  border: 7.5vh solid var(--color-light);
-  padding: 7.5vh;
+  border: var(--size) solid var(--color-light);
+  padding: var(--size);
   height: calc(100vh - 75px);
   background-color: var(--color-secondary);
 }
 
 #hero-container {
-  border: 7.5vh solid var(--color-light);
-  padding: 7.5vh;
-  margin-top: 7.5rem;
-  height: calc(70vh - 75px);
+  border: var(--size) solid var(--color-light);
+  padding: var(--size);
+  margin-top: var(--size);
+  height: calc(100vh - (var(--size)*4) - 75px);
   /* height: calc(10vh-75px); */
   background-color: var(--color-secondary);
   margin: auto;
@@ -129,12 +129,63 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  letter-spacing: 7.5vh;
+  letter-spacing: var(--size);
   padding: 5px;
+  padding-left: var(--size);
   text-transform: uppercase;
-  font-size: 7.5vh;
-  height: calc(40vh - 75px);
+  font-size: var(--size);
+  height: calc(100vh - (var(--size)*8) - 75px);
   color: var(--color-light);
-  border: 7.5vh solid var(--color-light);
+  border: var(--size) solid var(--color-light);
   background-color: var(--color-secondary);
+}
+
+@media only screen and (min-aspect-ratio: 125/45) {
+  #hero,
+  #hero-container, 
+  #hero-header {
+    background-color: var(--color-light);
+    border-color: var(--color-secondary);
+    color: var(--color-secondary)
+  }
+}
+
+@media only screen and (max-aspect-ratio: 113/68) {
+  #hero,
+  #hero-container, 
+  #hero-header {
+    background-color: var(--color-dark);
+    border-color: var(--color-primary);
+    color: var(--color-primary)
+  }
+
+  #header {
+    background-color: var(--color-light);
+  }
+
+  #header-name,
+  a {
+    color: var(--color-secondary);
+  }
+
+  #hero-header {
+    letter-spacing: 3.5vh;
+    padding-left: 3.5vh;
+  }
+
+  #header-name:hover {
+    text-shadow: 1rem 1rem 1.2rem var(--color-secondary);
+  }
+
+  .nav-link {
+    border-color: var(--color-secondary);
+    box-shadow: .5rem .5rem 1rem -.2rem var(--color-secondary);
+  }
+  .nav-link:hover {
+    box-shadow: 1rem 1rem 2rem -.4rem var(--color-secondary);
+  }
+  .nav-link:active,
+  .nav-link:focus {
+    box-shadow: .6rem .6rem 1.5rem -.3rem var(--color-secondary);
+  }
 }
